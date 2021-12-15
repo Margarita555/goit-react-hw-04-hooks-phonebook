@@ -30,10 +30,9 @@ function App() {
 
   const getVisibleContacts = () => {
     const normalizedFilter = filter.toLowerCase();
-    const visibleContacts = contacts.filter(contact =>
+    return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter),
     );
-    return visibleContacts;
   };
 
   const handleDeleteContact = name => {
